@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="./music.css">
+</head>
+<body>
+    <div class="all">
+        <!-- giao diện load nhạc -->
+        <div class="song">
+            <div class="song-content">
+                <p>Now playing:</p>
+                <h3>Sorry I like you</h3>
+                <img src="./image/song5.gif" alt="">                
+            </div>
+            <!-- //các nút điều khiển -->
+            <div class="song-control">
+                <div class="btn btn-repeat">
+                    <i class="fas fa-redo"></i>
+                </div>
+                <div class="btn btn-prev">
+                    <i class="fas fa-backward"></i>
+                </div>
+                <div class="btn btn-play">
+                    <i class="fas fa-play icon-play"></i>
+                    <i class="fas fa-pause icon-pause"></i>
+                </div>
+                <div class="btn btn-next">
+                    <i class="fas fa-forward"></i>
+                </div>
+                <div class="btn btn-random">
+                    <i class="fas fa-random"></i>
+                </div>
+                <div class="volume">
+                    <div id="volume-icon"><i class="fas fa-volume-up"></i></div>
+                    <input id="volume-progress" type="range" value="0" step="1" min="0" max="100">
+                </div>
+            </div>
+            <!-- thanh thời gian -->
+            <div class="progress-all">
+                <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="1000">
+                <div class="line"></div>
+            </div>
+
+            <audio id="audio" src=""></audio>
+        </div>
+        <!-- Danh sách nhạc -->
+        <div class="list"></div>
+    </div>
+    <script src="./music.js"></script>
+</body>
+</html>
