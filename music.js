@@ -276,6 +276,7 @@ const app = {
         repeatBtn.classList.toggle('active', app.isRepeat);
     },
     start: function(){
+        this.setConfig('volumeValue',app.volumeValue);
         //lấy giá trị từ local vào app
         this.loadConfig();
         //Định nghĩa các thuộc tính cho object
