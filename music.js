@@ -17,11 +17,10 @@ const repeatBtn = $('.btn-repeat');
 const list =  $('.list');
 const app = {
     currentIndex: 0,
-    volumeValue: 1,
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
-    config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY))  || {},//vừa lấy và thêm
+/*     config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY))  || {},//vừa lấy và thêm */
     songs: [
         {
             name: 'First date',
@@ -73,7 +72,7 @@ const app = {
             time: '1:53'
         }
     ],
-    setConfig: function(key,value){
+/*     setConfig: function(key,value){
         app.config[key] = value;
         localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(app.config));
     },
@@ -81,7 +80,7 @@ const app = {
         this.isRandom = this.config.isRandom;
         this.isRepeat = this.config.isRepeat;
         this.volumeValue = this.config.volumeValue;
-    },
+    }, */
     render: function(){
         const htmls = this.songs.map((song,index) => {
             return `
@@ -198,13 +197,13 @@ const app = {
             //Xử lí nút random
             randomBtn.onclick =function(){
                 app.isRandom = !app.isRandom;
-                app.setConfig('isRandom',app.isRandom);
+/*                 app.setConfig('isRandom',app.isRandom); */
                 randomBtn.classList.toggle('active', app.isRandom);
             }
             //Xử lí nút repeat
             repeatBtn.onclick =function(){
                 app.isRepeat = !app.isRepeat;
-                app.setConfig('isRepeat',app.isRepeat);
+/*                 app.setConfig('isRepeat',app.isRepeat); */
                 repeatBtn.classList.toggle('active', app.isRepeat);
             }
             //Xử lí khi hết bài hát
@@ -270,13 +269,13 @@ const app = {
             }
         })
     },
-    changeAppConfig: function(){
+/*     changeAppConfig: function(){
         randomBtn.classList.toggle('active', app.isRandom);
         repeatBtn.classList.toggle('active', app.isRepeat);
-    },
+    }, */
     start: function(){
         //lấy giá trị từ local vào app
-        this.loadConfig();
+/*         this.loadConfig(); */
         //Định nghĩa các thuộc tính cho object
         this.defineProperties();
         //tải thông tin bài hát vào giao diện load chính
@@ -287,7 +286,7 @@ const app = {
         this.render();
         this.changeCardActive();
         //load trạng thái random, repeat
-        this.changeAppConfig();
+/*         this.changeAppConfig(); */
     }
 }
 
