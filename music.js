@@ -102,7 +102,7 @@ const app = {
         list.innerHTML = htmls;
     },
     handleEvent: function(){
-            audio.volume = app.volumeValue;
+            audio.volume = 1;
             volumeProgress.value = audio.volume * 100;
         //Xử lí nút play khi click
             playBtn.onclick = function(){
@@ -162,7 +162,6 @@ const app = {
             volumeProgress.oninput = function(){
                 audio.volume = volumeProgress.value / 100;
                 app.volumeValue = audio.volume;
-                app.setConfig('volumeValue',app.volumeValue);
             } 
             //Xử lí khi click vào card trong list nhạc
             list.onclick = function(e){
@@ -276,7 +275,6 @@ const app = {
         repeatBtn.classList.toggle('active', app.isRepeat);
     },
     start: function(){
-        this.setConfig('volumeValue',app.volumeValue);
         //lấy giá trị từ local vào app
         this.loadConfig();
         //Định nghĩa các thuộc tính cho object
