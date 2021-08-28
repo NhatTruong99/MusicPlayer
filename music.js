@@ -102,7 +102,7 @@ const app = {
         list.innerHTML = htmls;
     },
     handleEvent: function(){
-            audio.volume = this.volumeValue;
+            audio.volume = app.volumeValue;
             volumeProgress.value = audio.volume * 100;
         //Xử lí nút play khi click
             playBtn.onclick = function(){
