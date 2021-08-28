@@ -1,27 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     font-size: 16px;
     font-family: 'Patrick Hand', cursive;
 }
-:root{
-}
-::-webkit-scrollbar{
+
+:root {}
+
+::-webkit-scrollbar {
     width: 12px;
 }
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(transparent,rgb(71, 186, 240));
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, rgb(71, 186, 240));
     border-radius: 6px;
 }
-::-webkit-scrollbar-thumb:hover{
-    background: linear-gradient(transparent,rgb(16, 124, 173));
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, rgb(16, 124, 173));
 }
-.all{
+
+.all {
     opacity: 0.98;
     display: flex;
     background: url(./background3.jpg);
@@ -29,10 +35,12 @@ html,body{
     width: 100%;
     height: 100vh;
 }
-.song{
+
+.song {
     width: 70%;
 }
-.song-content{
+
+.song-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,31 +48,36 @@ html,body{
     margin: 18px auto 25px auto;
     width: 90%;
 }
-.song-content p{
+
+.song-content p {
     font-size: 1.5rem;
     color: whitesmoke;
 }
-.song-content h3{
+
+.song-content h3 {
     color: rgba(201, 73, 173, 0.9);
     text-shadow: 1.3px 1.3px rgba(224, 214, 214, 0.8);
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
-.song-content img{
+
+.song-content img {
     opacity: 0.9;
     border-radius: 5px;
     object-fit: cover;
     width: 80%;
-    height:455px;
+    height: 455px;
     box-shadow: 0 0 15px 10px rgba(180, 214, 241, 0.8);
 }
-.progress-all{
+
+.progress-all {
     margin: 0;
     padding: 0;
     width: 100%;
     position: relative;
 }
-.progress{
+
+.progress {
     position: absolute;
     width: 100%;
     -webkit-appearance: none;
@@ -75,17 +88,19 @@ html,body{
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
     background-color: rgba(12, 166, 238, 0.2);
-    box-shadow: 0 0 6px 3px rgba(141, 189, 216, 0.6) ;
+    box-shadow: 0 0 6px 3px rgba(141, 189, 216, 0.6);
     z-index: 1;
 }
-.line{
+
+.line {
     position: absolute;
     top: 5px;
     left: 0;
-    height:12px;
-    background-image: linear-gradient(red,orange,yellow,rgb(9, 173, 9),rgb(0, 110, 255),rgb(216, 19, 216),purple);
+    height: 12px;
+    background-image: linear-gradient(red, orange, yellow, rgb(9, 173, 9), rgb(0, 110, 255), rgb(216, 19, 216), purple);
 }
-.progress::-webkit-slider-thumb{
+
+.progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 40px;
@@ -94,13 +109,15 @@ html,body{
     /* background-color: rgb(245, 195, 245) ; */
     background: url(./Image/ezgif.com-gif-maker.gif);
     background-size: cover;
-   /*  box-shadow: 0 0 7px 3px rgba(199, 97, 240, 0.8) ; */
+    /*  box-shadow: 0 0 7px 3px rgba(199, 97, 240, 0.8) ; */
     cursor: pointer;
 }
-.progress::-webkit-slider-thumb:hover{
-      height: 30px;
+
+.progress::-webkit-slider-thumb:hover {
+    height: 30px;
 }
-.song-control{
+
+.song-control {
     position: relative;
     width: 100%;
     margin-bottom: 10px;
@@ -109,7 +126,8 @@ html,body{
     justify-content: center;
     color: rgb(214, 205, 205);
 }
-.song-control .volume{
+
+.song-control .volume {
     font-size: 1.3rem;
     display: flex;
     justify-content: space-between;
@@ -118,67 +136,82 @@ html,body{
     top: 30%;
     right: 15px;
 }
-.volume #volume-progress{
-    margin-left: 10px ;
+
+.volume #volume-progress {
+    margin-left: 10px;
 }
-.song-control .btn{
+
+.song-control .btn {
     cursor: pointer;
     margin: auto 30px;
     font-size: 1.8rem;
 }
-.song-control .btn:hover{
+
+.song-control .btn:hover {
     color: rgb(236, 93, 124);
 }
-.song-control .btn-play{
+
+.song-control .btn-play {
     font-size: 2rem;
 }
+
 .song-control .btn-repeat,
-.song-control .btn-random{
+.song-control .btn-random {
     font-size: 1.5rem;
 }
-.btn-play{
+
+.btn-play {
     border: 2px solid rgb(226, 232, 238);
     box-shadow: 0 0 5px 2px rgba(181, 220, 243, 0.6);
     padding: 10px 15px 10px 16px;
     border-radius: 50%;
 }
-.btn-play .icon-pause{
+
+.btn-play .icon-pause {
     display: none;
-} 
-.btn-play.playing .icon-pause{
+}
+
+.btn-play.playing .icon-pause {
     display: inline-block;
 }
-.btn-play.playing .icon-play{
+
+.btn-play.playing .icon-play {
     display: none;
 }
-.btn.active{
+
+.btn.active {
     color: rgb(236, 93, 124);
 }
-.list{
+
+.list {
     flex: 1;
     background-color: rgba(120, 180, 214, 0.1);
     overflow-y: auto;
     /* box-shadow: 5px 0 20px 10px rgba(120, 180, 214, 0.6); */
 }
-.card{
+
+.card {
     opacity: 0.85;
     position: relative;
     display: flex;
     align-items: center;
-    background-color: rgba(255, 255, 255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     width: 90%;
     margin: 15px auto;
     border-radius: 8px;
-    box-shadow: 0 0 8px 4px rgba(211, 220, 230,0.8);
-    border: 1px solid rgba(255, 255, 255,0.6);
+    box-shadow: 0 0 8px 4px rgba(211, 220, 230, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
 }
-.card:hover{
+
+.card:hover {
     opacity: 1;
 }
-.card-avatar{
+
+.card-avatar {
     padding: 10px;
 }
-.card-avatar img{
+
+.card-avatar img {
     object-fit: cover;
     min-width: 100px;
     max-width: 100px;
@@ -186,13 +219,69 @@ html,body{
     max-height: 100px;
     border-radius: 45%;
 }
-.card-name{
+
+.card-name {
     font-size: 1.3rem;
 }
-.card-time p{
+
+.card-time p {
     position: absolute;
     top: 54%;
     right: 30px;
     font-size: 1.2rem;
-    color:rgb(70, 77, 83)
+    color: rgb(70, 77, 83)
+}
+
+@media (max-width: 1380px) {
+    .all {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .song-content {
+        width: 100%;
+    }
+
+    .list {
+        width: 80%;
+        margin: 40px auto 20px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .song-content img {
+        height: 300px;
+    }
+
+    .progress-all {
+        width: 110%;
+        margin-left: -5%;
+    }
+
+    html,
+    body {
+        font-size: 10px;
+    }
+
+    .volume {
+        display: none !important;
+    }
+
+    .song-control .btn {
+        margin: auto 15px;
+        font-size: 1.7rem;
+    }
+
+    .card-avatar img {
+        min-width: 50px;
+        max-width: 50px;
+        min-height: 50px;
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .song-content img {
+        height: 200px;
+    }
 }
