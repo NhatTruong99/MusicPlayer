@@ -191,7 +191,7 @@ body {
 }
 
 .card {
-    opacity: 0.85;
+    opacity: 0.9;
     position: relative;
     display: flex;
     align-items: center;
@@ -201,6 +201,13 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 8px 4px rgba(211, 220, 230, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.6);
+    cursor: default;
+}
+
+.card-active {
+    opacity: 0.9;
+    background-color: rgba(96, 168, 209);
+    border: 1px solid rgba(181, 198, 201, 0.6);
 }
 
 .card:hover {
