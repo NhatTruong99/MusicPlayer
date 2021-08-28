@@ -235,29 +235,34 @@ body {
     .song-control .btn:hover {
         color: rgb(236, 93, 124);
     }
+
 }
 
 @media (max-width: 1380px) {
-    .all {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .song-content {
         width: 100%;
     }
-
     .list {
         width: 80%;
         margin: 40px auto 20px auto;
     }
+    .song-content img {
+        height: 60vh ;
+    }
 }
-
+@media (max-width: 1024px) {
+    .all {
+        flex-direction: column;
+        align-items: center;
+    }
+    .song-content img {
+        height: 420px;
+    }
+}
 @media (max-width: 768px) {
     .song-content img {
         height: 300px;
     }
-
     .progress-all {
         width: 110%;
         margin-left: -5%;
