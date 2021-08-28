@@ -235,9 +235,7 @@ body {
     .song-control .btn:hover {
         color: rgb(236, 93, 124);
     }
-
 }
-
 @media (max-width: 1380px) {
     .song-content {
         width: 100%;
