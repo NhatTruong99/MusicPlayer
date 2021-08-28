@@ -197,14 +197,14 @@ const app = {
             //Xử lí nút random
             randomBtn.onclick =function(){
                 app.isRandom = !app.isRandom;
-/*                 app.setConfig('isRandom',app.isRandom); */
+            /*app.setConfig('isRandom',app.isRandom); */
                 randomBtn.classList.toggle('active', app.isRandom);
             }
             //Xử lí nút repeat
             repeatBtn.onclick =function(){
                 app.isRepeat = !app.isRepeat;
-/*                 app.setConfig('isRepeat',app.isRepeat); */
-                repeatBtn.classList.toggle('active', app.isRepeat);
+            /* app.setConfig('isRepeat',app.isRepeat); */
+               repeatBtn.classList.toggle('active', app.isRepeat);
             }
             //Xử lí khi hết bài hát
             audio.onended = function(){

@@ -12,8 +12,6 @@ body {
     font-family: 'Patrick Hand', cursive;
 }
 
-:root {}
-
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -147,10 +145,6 @@ body {
     font-size: 1.8rem;
 }
 
-.song-control .btn:hover {
-    color: rgb(236, 93, 124);
-}
-
 .song-control .btn-play {
     font-size: 2rem;
 }
@@ -178,9 +172,8 @@ body {
 .btn-play.playing .icon-play {
     display: none;
 }
-
-.btn.active {
-    color: rgb(236, 93, 124);
+.active {
+    color: rgb(236, 93, 124) ;
 }
 
 .list {
@@ -237,6 +230,11 @@ body {
     right: 30px;
     font-size: 1.2rem;
     color: rgb(70, 77, 83)
+}
+@media (min-width: 1380px){
+    .song-control .btn:hover {
+        color: rgb(236, 93, 124);
+    }
 }
 
 @media (max-width: 1380px) {
